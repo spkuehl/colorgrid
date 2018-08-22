@@ -4,7 +4,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'color_grid/style.css' %}">
-    <link rel="javascript" type="javascript" href="{% static 'color_grid/rotation.js' %}">
+    <script>
+    var list = {{ random_list|safe }};
+    console.log( {{ list|safe }} );
+    console.log( {{ list }} );
+    </script>
+    <script src="{% static 'color_grid/rotation.js' %}"></script>
   </head>
   <body>
     <div class="container">
