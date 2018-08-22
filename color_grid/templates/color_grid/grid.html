@@ -5,9 +5,7 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'color_grid/style.css' %}">
     <script>
-    var list = {{ random_list|safe }};
-    console.log( {{ list|safe }} );
-    console.log( {{ list }} );
+    var list = {{ random_list }};
     </script>
     <script src="{% static 'color_grid/rotation.js' %}"></script>
   </head>
