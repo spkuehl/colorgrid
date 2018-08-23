@@ -15,7 +15,7 @@
       {% for row in random_list %}
         <tr>
           {% for cell in row %}
-          <td id= "{% cycle 0 1 2 3 %}" style= "background-color: rgb({{cell.0}},{{cell.1}},{{cell.2}});"></td>
+          <td class='random-color-cell' style="background-color: rgb({{cell.0}},{{cell.1}},{{cell.2}});"></td>
           {% endfor %}
         </tr>
       {% endfor %}
