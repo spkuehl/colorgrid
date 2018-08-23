@@ -2,11 +2,12 @@
   <head>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <style>
-      table {
-        height: 100%;
-      }
-    </style>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'color_grid/style.css' %}">
+    <script>
+      var colorList = {{ flat_random_list }}; // To pass as a js variable to rotation.js
+    </script>
+    <script src="{% static 'color_grid/rotation.js' %}"></script>
   </head>
   <body>
     <div class="container">
@@ -14,11 +15,12 @@
       {% for row in random_list %}
         <tr>
           {% for cell in row %}
-          <td id= "{{ forloop.counter	}}" style= "background-color: rgb({{cell.0}},{{cell.1}},{{cell.2}});"></td>
+          <td class='random-color-cell' style="background-color: rgb({{cell.0}},{{cell.1}},{{cell.2}});"></td>
           {% endfor %}
         </tr>
       {% endfor %}
       </table>
+      <button id="rotate" type="button" class="btn btn-primary">Rotate</button>
     </div>
   </body>
 </html>
