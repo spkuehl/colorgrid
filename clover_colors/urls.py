@@ -17,5 +17,5 @@ from django.urls import path
 import color_grid.views as views
 
 urlpatterns = [
-    path('colorgrid/<int:perfect_square>/', views.random_integer_array),
+    path('colorgrid/<int:perfect_square>/', views.random_integer_array, name='colorgrid'),
 ]
