@@ -5,7 +5,7 @@
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'color_grid/style.css' %}">
     <script>
-    var list = {{ random_list }};
+      var colorList = {{ flat_random_list }}; // To pass as a js variable to rotation.js
     </script>
     <script src="{% static 'color_grid/rotation.js' %}"></script>
   </head>
@@ -15,11 +15,12 @@
       {% for row in random_list %}
         <tr>
           {% for cell in row %}
-          <td id= "{{ forloop.counter	}}" style= "background-color: rgb({{cell.0}},{{cell.1}},{{cell.2}});"></td>
+          <td id= "{% cycle 0 1 2 3 %}" style= "background-color: rgb({{cell.0}},{{cell.1}},{{cell.2}});"></td>
           {% endfor %}
         </tr>
       {% endfor %}
       </table>
+      <button id="rotate" type="button" class="btn btn-primary">Rotate</button>
     </div>
   </body>
 </html>
