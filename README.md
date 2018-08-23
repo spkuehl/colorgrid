@@ -15,6 +15,5 @@ pip install -r requirements.txt
 python manage.py runserver
 
 ### TODO: ###
-- [ ] Add more tests.
-- [ ] Have the cells rotate in a clockwise manner.
-- [ ] Create an alternate view to send unformatted 9 digit integers to the frontend.
+- [x] Add more tests.
+- [x] Have the cells rotate in a clockwise manner.

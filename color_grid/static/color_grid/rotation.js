@@ -2,17 +2,16 @@
 $( document ).ready(function() {
   var counter = 0;
   $("td.random-color-cell").each(function() {
-      $(this).attr("id", counter);
-      counter++;
-
-      // compare id to what you want
+    //Assign IDs to table cells.
+    $(this).attr("id", counter);
+    counter++;
   });
   $( "#rotate" ).click(function() {
-    colorList.unshift(colorList.pop());
-    console.log(colorList);
+    colorList.unshift(colorList.pop()); //Move last color to first in array.
     for (i = 0; i < colorList.length; i++) {
-        var elem = document.getElementById(i);
-        elem.style.backgroundColor = 'rgb(' + colorList[i] +')';
+      //Apply new colors to each cell.
+      var elem = document.getElementById(i);
+      elem.style.backgroundColor = 'rgb(' + colorList[i] +')';
     }
   });
 });
