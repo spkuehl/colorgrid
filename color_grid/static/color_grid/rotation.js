@@ -3,7 +3,8 @@ $( document ).ready(function() {
   var counter = 0;
   $("td.random-color-cell").each(function() {
     //Assign IDs to table cells.
-    $(this).attr("id", counter);
+    $(this).attr("id", idList[counter]);
+    $(this).text(idList[counter]);
     counter++;
   });
   $( "#rotate" ).click(function() {

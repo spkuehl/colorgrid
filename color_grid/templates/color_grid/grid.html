@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'color_grid/style.css' %}">
     <script>
       var colorList = {{ flat_random_list }}; // To pass as a js variable to rotation.js
+      var idList = {{ flat_cell_ids }}; // To pass as a js variable to rotation.js
     </script>
     <script src="{% static 'color_grid/rotation.js' %}"></script>
   </head>
