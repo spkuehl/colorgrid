@@ -18,4 +18,5 @@ import color_grid.views as views
 
 urlpatterns = [
     path('colorgrid/<int:perfect_square>/', views.random_integer_array, name='colorgrid'),
+    path('coiledcolorgrid/<int:perfect_square>/', views.coiled_random_integer_array, name='coiledcolorgrid'),
 ]
